@@ -1,55 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ridho Fisabilillah - Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/style.css?v=2">
+    <link rel="stylesheet" href="css/layout.css?v=6">
+    <link rel="stylesheet" href="css/animations.css?v=2">
+    <link rel="stylesheet" href="css/components.css?v=2">
+    <link rel="stylesheet" href="css/home.css?v=6">
+    <link rel="stylesheet" href="css/responsive.css?v=2">
 </head>
+
 <body>
     <!-- Global Loader -->
     <div class="loader-wrapper" id="global-loader">
         <div class="loader-circle"></div>
     </div>
 
-    <!-- Sidebar -->
-    <aside class="sidebar" id="sidebar">
-        <div class="profile-section">
-            <div class="profile-img"></div>
-            <h2 class="profile-name">Ridho Fisabilillah</h2>
-            <p class="profile-role" data-i18n="sidebar_role">Information Systems Student</p>
-        </div>
-        
-        <div class="contact-info">
-            <div class="contact-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                <a href="mailto:ridho@example.com">ridho@example.com</a>
-            </div>
-            <div class="contact-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                <a href="#">LinkedIn</a>
-            </div>
-            <div class="contact-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                <a href="#">GitHub</a>
-            </div>
-            <div class="contact-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                <a href="#">Instagram</a>
-            </div>
-        </div>
-
-        <nav class="sidebar-nav">
-            <a href="index.html" class="active" data-i18n="nav_home">Home</a>
-            <a href="about.html" data-i18n="nav_about">About Me</a>
-            <a href="portfolio.html" data-i18n="nav_portfolio">Portfolio</a>
-            <a href="skills.html" data-i18n="nav_skills">Skills</a>
-            <a href="experience.html" data-i18n="nav_experience">Experience</a>
-            <a href="contact.html" data-i18n="nav_contact">Contact</a>
-        </nav>
-    </aside>
 
     <!-- Main Content -->
     <main class="main-content">
@@ -65,13 +34,15 @@
                     <a href="experience.html" data-i18n="nav_experience">Experience</a>
                     <a href="contact.html" data-i18n="nav_contact">Contact</a>
                 </div>
-                
+
                 <!-- Language Dropdown -->
                 <div class="lang-dropdown">
                     <button class="lang-btn" id="lang-btn">
                         <img src="assets/images/en-flag.svg" alt="English" class="flag-icon" id="current-flag">
                         <span id="current-lang">English</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
                     </button>
                     <div class="lang-menu" id="lang-menu">
                         <a href="#" data-lang="en" class="lang-option">
@@ -82,7 +53,6 @@
                         </a>
                     </div>
                 </div>
-
                 <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu" style="margin-left: 1rem;">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
                 </button>
@@ -93,20 +63,38 @@
         <div class="page-container">
             <section class="hero-section mb-5">
                 <div class="hero-glow"></div>
-                <h2 class="section-subtitle reveal fade-up" data-i18n="home_greeting">HELLO, I'M</h2>
-                <h1 class="hero-title reveal fade-up delay-100">RIDHO FISABILILLAH</h1>
-                <h3 class="mb-3 text-light reveal fade-up delay-200" style="font-weight: 500; font-size: 1.25rem;" data-i18n="role">Information Systems Student</h3>
-                
-                <p class="mb-4 reveal fade-up delay-300" style="max-width: 850px; font-size: 1.05rem;" data-i18n="home_desc">
-                    A brief description of an Information Systems student with experience in web development, data processing, organization, and administration. Ready to actively contribute in a professional environment.
-                </p>
-                
-                <div class="badges-container mb-4 reveal fade-up delay-400">
-                    <a href="portfolio.html" class="btn btn-primary" data-i18n="btn_portfolio">View Portfolio</a>
-                    <a href="#" class="btn btn-outline">
-                        <span data-i18n="btn_cv">Download CV</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 16px; height: 16px; margin-left: 0.5rem;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                    </a>
+                <div class="hero-content-wrapper">
+                    <div class="hero-text-content">
+                        <h2 class="section-subtitle hero-anim-1" data-i18n="home_greeting">HELLO, I'M</h2>
+                        <h1 class="hero-title" style="position: relative;">
+                            <!-- Ghost text to preserve exact height and prevent layout shift -->
+                            <span style="visibility: hidden;">RIDHO FISABILILLAH</span>
+                            <span id="typewriter-name" style="position: absolute; top: 0; left: 0; width: 100%;" data-text="RIDHO FISABILILLAH"></span>
+                        </h1>
+                        <h3 class="mb-3 text-light hero-anim-2" style="font-weight: 500; font-size: 1.25rem;"
+                            data-i18n="role">Information Systems Student</h3>
+
+
+                        <div class="badges-container mb-4 hero-anim-3">
+                            <a href="about.html" class="btn btn-outline" data-i18n="btn_more_me">More Me</a>
+                            <a href="#" class="btn btn-primary">
+                                <span data-i18n="btn_cv">Download CV</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    style="width: 16px; height: 16px; margin-left: 0.5rem;">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7 10 12 15 17 10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-image-content hero-anim-0">
+                        <div class="hero-image-container">
+                            <!-- Placeholder image, user will change this -->
+                            <img src="assets/images/TES.png" alt="Ridho Fisabilillah" class="hero-img">
+                            <div class="hero-image-backdrop"></div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -114,19 +102,35 @@
                 <h2 class="section-title animate-on-scroll" data-i18n="what_i_do">What I Do</h2>
                 <div class="grid-3 mt-4">
                     <div class="card animate-on-scroll">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mb-2" style="width: 32px; height: 32px; color: var(--accent);"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mb-2"
+                            style="width: 32px; height: 32px; color: var(--accent);">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
                         <h3 class="mb-1">Web Development</h3>
-                        <p class="text-light" data-i18n="wd_web_desc">Building responsive and dynamic web applications using modern technologies like Laravel, PHP, and Vanilla JavaScript.</p>
+                        <p class="text-light" data-i18n="wd_web_desc">Building responsive and dynamic web applications
+                            using modern technologies like Laravel, PHP, and Vanilla JavaScript.</p>
                     </div>
                     <div class="card animate-on-scroll delay-100">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mb-2" style="width: 32px; height: 32px; color: var(--accent);"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mb-2"
+                            style="width: 32px; height: 32px; color: var(--accent);">
+                            <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+                            <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+                        </svg>
                         <h3 class="mb-1">Data Analysis</h3>
-                        <p class="text-light" data-i18n="wd_data_desc">Processing and visualizing data to support decision-making using data visualization tools.</p>
+                        <p class="text-light" data-i18n="wd_data_desc">Processing and visualizing data to support
+                            decision-making using data visualization tools.</p>
                     </div>
                     <div class="card animate-on-scroll delay-200">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mb-2" style="width: 32px; height: 32px; color: var(--accent);"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mb-2"
+                            style="width: 32px; height: 32px; color: var(--accent);">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="16"></line>
+                            <line x1="8" y1="12" x2="16" y2="12"></line>
+                        </svg>
                         <h3 class="mb-1">Organization</h3>
-                        <p class="text-light" data-i18n="wd_org_desc">Experienced in managing administration, time management, and collaborating effectively in a team.</p>
+                        <p class="text-light" data-i18n="wd_org_desc">Experienced in managing administration, time
+                            management, and collaborating effectively in a team.</p>
                     </div>
                 </div>
             </section>
@@ -141,7 +145,8 @@
                         </div>
                         <div class="project-content">
                             <h3 class="project-title" data-i18n="proj1_title">Production Monitoring System</h3>
-                            <p class="project-desc" data-i18n="proj1_desc">A web-based application to help monitor the production process across branches centrally.</p>
+                            <p class="project-desc" data-i18n="proj1_desc">A web-based application to help monitor the
+                                production process across branches centrally.</p>
                             <div class="badges-container">
                                 <span class="badge">Laravel</span>
                                 <span class="badge">PHP</span>
@@ -156,7 +161,8 @@
                         </div>
                         <div class="project-content">
                             <h3 class="project-title" data-i18n="proj2_title">Fraud Detection Dashboard</h3>
-                            <p class="project-desc" data-i18n="proj2_desc">An interactive data visualization dashboard to detect anomalies in company datasets.</p>
+                            <p class="project-desc" data-i18n="proj2_desc">An interactive data visualization dashboard
+                                to detect anomalies in company datasets.</p>
                             <div class="badges-container">
                                 <span class="badge">Power BI</span>
                                 <span class="badge">Data Analysis</span>
@@ -177,6 +183,7 @@
     </main>
 
     <script src="js/lang.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.js?v=6"></script>
 </body>
+
 </html>

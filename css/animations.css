@@ -1,0 +1,125 @@
+@keyframes pageEnter {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pageLeave {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-15px); }
+}
+
+/* Global Loader */
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: var(--sidebar-width);
+    width: calc(100vw - var(--sidebar-width));
+    height: 100vh;
+    background-color: var(--bg-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loader-wrapper.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-circle {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(139, 92, 246, 0.2);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Core Animation System (Phase 1) */
+.reveal, .animate-on-scroll {
+    opacity: 0;
+    will-change: opacity, transform;
+    transition: all var(--transition-smooth);
+}
+
+/* Variations */
+.reveal.fade-up, .animate-on-scroll {
+    transform: translateY(40px);
+}
+.reveal.fade-up.reverse-anim, .animate-on-scroll.reverse-anim {
+    transform: translateY(-40px);
+}
+.reveal.fade-in {
+    transform: translateY(0);
+}
+.reveal.slide-left {
+    transform: translateX(-40px);
+}
+.reveal.slide-left.reverse-anim {
+    transform: translateX(40px);
+}
+.reveal.slide-right {
+    transform: translateX(40px);
+}
+.reveal.slide-right.reverse-anim {
+    transform: translateX(-40px);
+}
+.reveal.scale-in {
+    transform: scale(0.9);
+}
+
+/* Active State */
+.reveal.is-visible, .animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translate(0) scale(1);
+}
+
+/* Stagger Delays */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    .reveal, .animate-on-scroll {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
+/* Language Text Change Animations */
+.lang-exit {
+    opacity: 0 !important;
+    transform: translateY(8px) scale(0.98) !important;
+    transition: opacity 0.3s ease, transform 0.3s ease !important;
+}
+
+.lang-enter {
+    animation: textEnterLang 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes textEnterLang {
+    from {
+        opacity: 0;
+        transform: translateY(-8px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}

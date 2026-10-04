@@ -1,0 +1,160 @@
+/* Hero Section Animasi (Phase 3) */
+.hero-section {
+    position: relative;
+    z-index: 1;
+    min-height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem; /* Breathing room on mobile */
+}
+
+.hero-glow {
+    position: absolute;
+    top: -20%;
+    left: -10%;
+    width: 60vw;
+    max-width: 800px;
+    height: 140%;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.12) 0%, rgba(139, 92, 246, 0) 70%);
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+    animation: floatGlow 15s ease-in-out infinite alternate;
+}
+
+.hero-content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-direction: column-reverse; /* text below image on mobile */
+}
+
+.hero-text-content {
+    flex: 1;
+}
+
+.hero-image-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 350px; /* limits image size on mobile */
+}
+
+.hero-image-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 30px;
+    z-index: 1;
+}
+
+.hero-image-backdrop {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(59, 130, 246, 0.1));
+    border-radius: 30px;
+    z-index: -1;
+    transform: rotate(5deg);
+    transition: transform 0.4s ease;
+}
+
+.hero-image-container:hover .hero-image-backdrop {
+    transform: rotate(0deg) scale(1.02);
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    border: 2px solid rgba(139, 92, 246, 0.3);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    background-color: transparent; /* transparent for PNGs */
+    position: relative;
+    z-index: 2;
+}
+
+/* Desktop override */
+@media (min-width: 992px) {
+    .hero-section {
+        margin-top: -8vh; /* Shifts the content up slightly on desktop */
+    }
+
+    .hero-content-wrapper {
+        flex-direction: row; /* text on left, image on right */
+        gap: 5rem;
+    }
+    
+    .hero-image-content {
+        max-width: 450px;
+    }
+}
+
+@keyframes floatGlow {
+    0% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(5%, 8%) scale(1.05); }
+    66% { transform: translate(-2%, 5%) scale(0.95); }
+    100% { transform: translate(-5%, -5%) scale(1); }
+}
+
+/* Opening Animations */
+.hero-anim-0, .hero-anim-1, .hero-anim-2, .hero-anim-3 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+}
+.hero-anim-3 {
+    transform: translateY(20px) scale(0.98);
+}
+.hero-anim-active {
+    opacity: 1 !important;
+    transform: translate(0) scale(1) !important;
+}
+
+/* Typewriter Cursor */
+.typewriter-cursor {
+    display: inline-block;
+    width: 4px;
+    height: 0.9em;
+    background-color: var(--accent);
+    margin-left: 6px;
+    vertical-align: baseline;
+    animation: blink 0.8s infinite;
+}
+.typewriter-cursor.hide {
+    opacity: 0;
+    animation: none;
+    transition: opacity 0.5s ease;
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Subtle glow on name */
+.hero-title.glow-active {
+    text-shadow: 0 0 25px rgba(139, 92, 246, 0.4);
+    transition: text-shadow 1.5s ease;
+}
+
+/* Section Typography */
+.hero-title {
+    font-size: clamp(2.1rem, 5vw + 1rem, 4rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: clamp(0.5rem, 2vw, 1rem);
+    letter-spacing: -1px;
+    padding-right: 15px; /* Provides space so the cursor doesn't wrap alone */
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #ffffff, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
