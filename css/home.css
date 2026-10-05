@@ -101,13 +101,25 @@
     z-index: 3; /* Hover image sits above primary */
 }
 
-/* Hover Effects */
-.hero-image-container:hover .img-primary {
+/* Hover Effects (Mouse only) */
+@media (hover: hover) {
+    .hero-image-container:hover .img-primary {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+    .hero-image-container:hover .img-hover {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Touch Effects (Triggered by JS) */
+.hero-image-container.is-tapped .img-primary {
     opacity: 0;
     transform: scale(1.05);
 }
 
-.hero-image-container:hover .img-hover {
+.hero-image-container.is-tapped .img-hover {
     opacity: 1;
     transform: scale(1);
 }

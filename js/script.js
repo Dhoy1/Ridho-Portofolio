@@ -44,6 +44,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    
+    // Toggle image on tap for touch devices
+    const heroImageContainer = document.querySelector('.hero-image-container');
+    if (heroImageContainer) {
+        heroImageContainer.addEventListener('click', function(e) {
+            this.classList.toggle('is-tapped');
+        });
+    }
 
     let currentPath = window.location.pathname.split('/').pop();
     if (currentPath === '' || currentPath === '/') {
