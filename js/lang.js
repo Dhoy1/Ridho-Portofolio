@@ -11,6 +11,8 @@ const translations = {
         "sidebar_role": "Information Systems Student | Tech Enthusiast",
         
         "home_greeting": "HELLO, I'M",
+        "bubble_1": "Psst... Don't click my face!",
+        "bubble_2": "Wait, why did you click?<br>I told you not to.<br>Well... if you're here to offer me a job, I'm ready!",
         "home_desc": "7th-semester Information Systems student at Universitas Darma Persada. A passionate Tech Enthusiast eager to explore various IT fields, including Web Development, Front-End, and Data Analytics. Highly adaptable and ready to thrive in the tech industry.",
         "btn_portfolio": "View Portfolio",
         "btn_cv": "Download CV",
@@ -91,6 +93,8 @@ const translations = {
         "sidebar_role": "Mahasiswa Sistem Informasi | Penggiat Teknologi",
         
         "home_greeting": "HALO, SAYA",
+        "bubble_1": "Pstt... Dilarang klik wajah saya!",
+        "bubble_2": "Loh kok diklik?<br>Padahal udah dibilang jangan.<br>Yaudah... kalau sekalian mau ngajak kerja, saya siap!",
         "home_desc": "Mahasiswa semester 7 Sistem Informasi di Universitas Darma Persada. Seorang Penggiat Teknologi yang antusias mengeksplorasi berbagai bidang IT, seperti Pengembangan Web, Front-End, dan Analisis Data. Siap beradaptasi dan berkembang di industri teknologi.",
         "btn_portfolio": "Lihat Portofolio",
         "btn_cv": "Unduh CV",
