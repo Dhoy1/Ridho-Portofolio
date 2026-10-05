@@ -200,8 +200,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         currentText = isDeleting ? '' : textToType;
                     }
 
+                    // Convert newlines to <br> for forced line breaks
+                    let htmlText = currentText.replace(/\n/g, '<br>');
+                    
                     // Render the text safely wrapped so the cursor doesn't wrap alone
-                    let words = currentText.split(' ');
+                    let words = htmlText.split(' ');
                     let lastWord = words.pop() || '';
                     let firstPart = words.length > 0 ? words.join(' ') + ' ' : '';
 
